@@ -27,8 +27,8 @@ public class SignupPage extends Frame implements ActionListener{
 		
 		t3.setEchoChar('*');
 		
-	    b1 = new Button("SUBMIT");
-	    b1.addActionListener(this);
+	        b1 = new Button("SUBMIT");
+	        b1.addActionListener(this);
 	    
 		add(f1);
 		add(t1);
