@@ -5,7 +5,10 @@ import java.awt.TextField;
 import java.awt.Button;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-public class SignupPage extends Frame implements ActionListener{
+import java.awt.event.WindowListener;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowAdapter;
+public class SignupPage extends Frame implements ActionListener,WindowListener{
 	TextField t1 = new TextField(30);
 	TextField t2 = new TextField(30);
 	TextField t3 = new TextField(30);
@@ -40,6 +43,12 @@ public class SignupPage extends Frame implements ActionListener{
 		t1.setText("example@gmail.com");
 		t2.setText("username");
 		t3.setText("password");
+		this.addWindowListener(new WindowAdapter() {
+			public void windowClosing(WindowEvent we) {
+				System.exit(0);
+			}
+			
+		});
 		
 	}
 	public void actionPerformed(ActionEvent e) {
@@ -47,7 +56,6 @@ public class SignupPage extends Frame implements ActionListener{
 		System.out.println("Username  - "+t2.getText());
 		System.out.println("Password  - "+t3.getText());
 	}
-	
     public static void main(String[] args) {
     	 new SignupPage();
      }
