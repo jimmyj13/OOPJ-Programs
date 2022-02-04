@@ -40,9 +40,9 @@ public class SignupPage extends Frame implements ActionListener,WindowListener{
 		add(f3);
 		add(t3);
 		add(b1);
-		t1.setText("example@gmail.com");
-		t2.setText("username");
-		t3.setText("password");
+		t1.setText("");
+		t2.setText("");
+		t3.setText("");
 		this.addWindowListener(new WindowAdapter() {
 			public void windowClosing(WindowEvent we) {
 				System.exit(0);
